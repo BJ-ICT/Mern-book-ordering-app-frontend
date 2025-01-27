@@ -1,4 +1,4 @@
-import { useCreateMyUser } from "@/api/MyUserApi";
+
 import { AppState, Auth0Provider, User } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
 

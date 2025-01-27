@@ -15,6 +15,11 @@ const UserNameMenu = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-white shadow-lg rounded-md p-2"> {/* Added white background and shadow */}
                 <DropdownMenuItem>
+                    <Link to="/manage-bookStore" className="font-bold hover:text-blue-custom">
+                        Manage Book Store
+                    </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
                     <Link to="/user-profile" className="font-bold hover:text-blue-custom">
                         User Profile
                     </Link>
