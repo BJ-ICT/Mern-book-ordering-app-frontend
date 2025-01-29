@@ -18,7 +18,7 @@ const Auth0ProviderWithNavigate = ({ children }:Props) => {
     if (!domain || !clientId || !redirectUri || !audience) {
         throw new Error ("unable to intialise auth");
     }
-    const onRedirectCallback = (appState?: AppState, user?:User) => {
+    const onRedirectCallback = ( _appState?: AppState, _user?:User) => {
        navigate ("/auth-callback")
     }; 
 

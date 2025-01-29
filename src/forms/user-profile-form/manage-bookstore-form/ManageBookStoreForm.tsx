@@ -42,9 +42,13 @@ const formSchema = z.object({
 
     })
 ),
-    imageFile: z.instanceof(File, {message: "image is required"}),
+    imageUrl: z.string().optional(),
+    imageFile: z.instanceof(File, {message: "image is required"}).optional (),
 
-});
+}).refine ((data)=> data.imageUrl || data.imageFile, {
+    message:"Either image Url or image File must be provided",
+    path: ["imageFile"]
+})
 
 type BookStoreFormData= z.infer<typeof formSchema>
 
@@ -110,7 +114,11 @@ const ManageBookStoreForm = ({onSave, isLoading, bookstore}: Props) => {
         formData.append(`bookItem[${index}][price]`,(bookItem.price * 100).toString()
     );
     });
-    formData.append (`imageFile`,formDataJson.imageFile);
+
+    if (formDataJson.imageFile){
+        formData.append (`imageFile`,formDataJson.imageFile);
+    }
+    
 
     onSave (formData);
 

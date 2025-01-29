@@ -1,12 +1,16 @@
-import { useCreateMyBookStore, useGetMyBookStore } from '@/api/MyBookStoreApi';
+import { useCreateMyBookStore, useGetMyBookStore, useUpdateMyBookStore } from '@/api/MyBookStoreApi';
 import ManageBookStoreForm from '@/forms/user-profile-form/manage-bookstore-form/ManageBookStoreForm';
 
 
 const ManageBookStorePage = () => {
-    const {createBookStore, isLoading } = useCreateMyBookStore();
-    const {bookstore}= useGetMyBookStore ();
+    const {createBookStore, isLoading: isCreateLoading } = useCreateMyBookStore();
+    const { bookstore }= useGetMyBookStore ();
+    const {updateBookStore, isLoading: isUpdateLoading} = useUpdateMyBookStore ();
+
+    const isEditing = !!bookstore;
+
     return (
-        <ManageBookStoreForm onSave = {createBookStore} isLoading = {isLoading}/>
+        <ManageBookStoreForm  onSave = { isEditing ? updateBookStore:createBookStore} isLoading = {isCreateLoading || isUpdateLoading}/>
     );
     
 };
