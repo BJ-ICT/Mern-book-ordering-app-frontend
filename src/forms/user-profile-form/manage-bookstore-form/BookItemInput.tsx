@@ -5,7 +5,7 @@ import { useFormContext } from "react-hook-form";
 
 type Props = {
     index: number;
-    removeBookItem: () => void;
+    removeBookItem: () =>  void;
 };
 
 const BookItemInput = ({ index, removeBookItem }: Props) => {
