@@ -5,7 +5,7 @@ import { toast } from "sonner";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-export const useGetMyBookStore = ( )=> {
+export const useGetMyBookStore  = ( )=> {
     const { getAccessTokenSilently } = useAuth0();
 
     const getMyBookStoreRequest = async ():Promise <BookStore> => {
