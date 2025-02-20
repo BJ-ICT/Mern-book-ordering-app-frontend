@@ -21,6 +21,7 @@ export type BookStore = {
     city: string;
     deliveryPrice: number;
     estimatedDeliveryTime: number;
+    categeories: any; 
     category: string[];
     bookItems: BookItem[];
     imageUrl : string;

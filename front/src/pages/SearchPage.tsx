@@ -1,4 +1,4 @@
-import { useSerachBookStores } from "@/api/BookStoreApi";
+import { useSearchBookStores } from "@/api/BookStoreApi";
 import SearchResultCard from "@/components/SearchResultCard";
 import SearchResultInfo from "@/components/SearchResultInfo";
 import {useParams} from "react-router-dom";
@@ -8,7 +8,7 @@ import {useParams} from "react-router-dom";
 
 const SearchPage = () => {
     const {city} = useParams ();
-    const {results, isLoading} = useSerachBookStores(city);
+    const {results, isLoading} = useSearchBookStores(city);
 
     if (isLoading) {
         <span>Loading...</span>;

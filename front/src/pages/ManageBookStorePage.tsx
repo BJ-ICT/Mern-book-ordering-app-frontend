@@ -10,7 +10,7 @@ const ManageBookStorePage = () => {
     const isEditing = !!bookstore;
 
     return (
-        <ManageBookStoreForm  onSave = { isEditing ? updateBookStore:createBookStore} isLoading = {isCreateLoading || isUpdateLoading}/>
+        <ManageBookStoreForm  onSave = { isEditing ? updateBookStore : createBookStore} isLoading = {isCreateLoading || isUpdateLoading}/>
     );
     
 };
