@@ -46,7 +46,7 @@ const AppRoutes = () => {
                     element={
                         <Layout>
                             <ManageBookStorePage />
-                        </Layout>
+                        </ Layout>
                     }
                 />
             </Route>
