@@ -142,7 +142,7 @@ export const useUpdateMyBookStore = () => {
 
     };
 
-    const {mutate: updateBookStore, isLoading, error, isSuccess} = useMutation(updateBookStoreRequest);
+    const { mutate: updateBookStore, isLoading, error, isSuccess} = useMutation(updateBookStoreRequest);
 
     if (isSuccess) {
         toast.success ("Bookstore Updated");
