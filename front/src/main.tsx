@@ -8,7 +8,7 @@ import Auth0ProviderWithNavigate from "./auth/Auth0ProviderWithNavigate";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Toaster } from "sonner";
 
-require('dotenv').config();
+
 
 
 const queryClient = new QueryClient ({
