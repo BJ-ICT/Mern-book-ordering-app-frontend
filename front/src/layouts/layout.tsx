@@ -18,4 +18,4 @@ const layout = ({children, showHero = false}: Props) => {
     )
 
 }
-export default layout
+export default layout;

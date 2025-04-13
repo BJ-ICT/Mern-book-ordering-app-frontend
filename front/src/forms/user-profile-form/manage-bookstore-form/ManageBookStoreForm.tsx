@@ -23,7 +23,6 @@ const formSchema = z.object({
         required_error: "City is required"
     }),
     
-
     //coerce convert string in to number
     deliveryPrice: z.coerce.number({
         required_error: "Deliver Price is required",
@@ -64,7 +63,7 @@ const ManageBookStoreForm = ({onSave, isLoading, bookstore}: Props) => {
         resolver : zodResolver(formSchema),
         defaultValues: {
             category: [],
-            bookItems:[{name: "", price: 0}],
+            bookItems:[{name: '', price: 0}],
         },
     });
 
@@ -99,7 +98,6 @@ const ManageBookStoreForm = ({onSave, isLoading, bookstore}: Props) => {
 
         formData.append ("bookStoreName", formDataJson.bookStoreName);
         formData.append ("city", formDataJson.city);
-
         formData.append ("deliveryPrice", (formDataJson.deliveryPrice* 100).toString()
     );
 
